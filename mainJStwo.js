@@ -1,5 +1,6 @@
 class Planet{
-    constructor(){
+    constructor(game){
+        this.game = game;
         this.x = 200;
         this.y = 200;
         this.radius = 80;
@@ -16,7 +17,7 @@ class Game{
         this.canvas = canvas;
         this.width = this.canvas.width;
         this.height = this.canvas.height;
-        this.planet = new Planet();
+        this.planet = new Planet(this);
     }
     render(context){
         this.planet.draw(context);
